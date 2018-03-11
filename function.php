@@ -55,14 +55,12 @@ function add_contact($one_string)
    $redis->set($name,$phone_number);
 }
 
-//add_contact('jie              7788597232');
 //print_r(get_contact('zyguo'));
 
 function onestrsms($str)
 {
    global $redis,$array;
    $from=$array["from"];
-   //$from='7788260163';
    $out=explode(" ",$str);
    $to=$out[0];
    $message=implode(" ",array_slice($out,1));
